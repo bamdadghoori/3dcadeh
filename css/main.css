@@ -32,77 +32,10 @@
     font-weight: bold;
   }
 
-html,body{
 
-    overflow-x: hidden;
-}
-body{
-    background-color: #f5f7fb;
-    /* font-family: yekan; */
-    /* overflow-y: scroll; */
-}
-nav{
-    direction: rtl;
-    /* float: right; */
-    width: 100%;
-    height: 10vh;
-    font-family: sahel;
-    background-color: #23272c;
-    color:white;
-}
-.dropdown-menu{
-    background-color: #23272c;
-    
-    height: fit-content;
-}
-.dropdown-menu a{
-    color: white;
-    direction: rtl;
-    float: right;
-    position: relative;
-    /* margin-right:-2vw ; */
-    width: inherit;
-}
-.dropdown-menu a:hover{
-    background-color: unset !important;
-    opacity: 0.8;
-    color: white !important;
-}
-.nav-link{
-    color: white !important;
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
-.nav-link.active{
-    background-color: #ce3c5c !important;
-}
-.navbar-nav{
-    position: absolute;
-    right: 25vw;
-}
-.navbar-brand{
-    color: white !important;
-    position: absolute;
-    left: -26vw;
-  top:1.5vh;
-}
-nav .form-inline{
-    position: absolute;
-    /* left: 26vw; */
-    width: 32vw;
-}
-.second-nav{
-    background-color:#f5f7fb ;
-    margin-top: 2vh;
-    width: 75vw;
-    left: 12.5vw;
-    border-radius: 10px;
-    border: #025928 solid 1px;
-    box-shadow: 1px 1px 5px #025928;
-}
-.second-nav ul{
+/* .second-nav ul{
     margin-right: 25vw;;
-}
+} */
 .second-nav li:last-child{
     /* margin-right: 25vw; */
 }
@@ -123,65 +56,15 @@ nav .form-inline{
     position: absolute;
     left: 15vw;
 } */
-.bullhorn{
-    position: absolute;
-    left:-15vw;
-    /* border-left: solid; */
-}
-.shopping-cart{
-    position: absolute;
-    left:-22vw
-}
-.register{
-position: absolute;
-left: -14vw;
-}
-.login{
-    position: absolute;
-    left: -7vw;
 
-}
-.login a{
-    /* width: 10vw; */
-}
-.nav-item select{
-    padding:5px;
-    border-radius: 5px;
-    margin-left: 1vw;
-    /* -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background:url("../img/down-chevron.png") ; */
-}
-.search-section{
-    position: relative;
-    direction: ltr;
-    right: 24vw;
-    /* right: 10vw; */
-    margin-top: -6vh;
-    /* display: contents; */
-}
-.search-section input{
-    width: 20vw !important;
-    /* direction: rtl; */
-    
-}
-.search-section h3{
-    margin-right: 6vw;
-    
-    font-family: sahel;
-    font-size: 4vh;
-    font-weight: bold;
-}
-#search-button{
-    height: 6.5vh;
-    background-color: #67c4b0;
-    margin-left: -0.8vw;
-}
+/*  */
+
+
+
 .models{
     direction: rtl;
     padding: 9px;
-    margin-top: 5vh;
+    margin-top: 9vh;
 }
 .models img{
     width: 17.4vw;
@@ -422,5 +305,38 @@ input:focus ~ .floating-label {
   .free input{
       width: 4vw;
       height: 4vh;
+  }
+  /* responsive */
+  @media(max-width:600px){
+      .model{
+          margin-bottom: 1vh;
+      }
+      .model .small-image{
+width: 100%;
+      }
+      .paginationjs{
+          left: 32vw;
+      }
+      .large-image,.large-image-2{
+          display: none !important;
+      }
+  }
+  /* responsive miani */
+  @media  screen and (min-width:600px) and (max-width:767px) {
+      .model{
+          margin-bottom: 1vh;
+      }
+      .model .small-image{
+        width: 100%;
+              }
+              .large-image img,.large-image-2 img{
+                display: none;
+              }
+              .paginationjs{
+                left: 30vw;
+            }
+            .models{
+                margin-top: 18vh;
+            }
   }
   

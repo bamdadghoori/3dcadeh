@@ -8,7 +8,7 @@ $(document).ready(function(){
         dataSource: [
             //mitooni be jaye hello tage html bezari! masalan<img>
             //age az img estefade mikoni hatman '\' ro tabdil be '/' kon vagarna axo nemishnase!
-            {name: `<div class="col-md-3 ">
+            {name: `<div class="col-md-3 col-sm-6">
             <div class="model">
             <div>
               <img class="small-image" src="img/italian-maple-3d-model-obj-mtl-3ds-fbx-3dm-dwg.jpg">
@@ -30,7 +30,7 @@ $(document).ready(function(){
             </div>
           </div>
           </div>`},
-          {name: `<div class="col-md-3 ">
+          {name: `<div class="col-md-3 col-sm-6">
           <div class="model">
           <div>
             <img class="small-image" src="img/italian-maple-3d-model-obj-mtl-3ds-fbx-3dm-dwg.jpg">
@@ -52,7 +52,7 @@ $(document).ready(function(){
           </div>
         </div>
         </div>`},
-        {name: `<div class="col-md-3 ">
+        {name: `<div class="col-md-3 col-sm-6">
         <div class="model">
         <div>
           <img class="small-image" src="img/italian-maple-3d-model-obj-mtl-3ds-fbx-3dm-dwg.jpg">
@@ -74,7 +74,7 @@ $(document).ready(function(){
         </div>
       </div>
       </div>`},
-      {name: `<div class="col-md-3 ">
+      {name: `<div class="col-md-3 col-sm-6">
       <div class="model">
       <div>
         <img class="small-image" src="img/italian-maple-3d-model-obj-mtl-3ds-fbx-3dm-dwg.jpg">
@@ -96,7 +96,7 @@ $(document).ready(function(){
       </div>
     </div>
     </div>`},
-    {name: `<div class="col-md-3 ">
+    {name: `<div class="col-md-3 col-sm-6">
     <div class="model">
     <div>
       <img class="small-image" src="img/view 01.jpg">
@@ -118,7 +118,7 @@ $(document).ready(function(){
     </div>
   </div>
   </div>`},
-  {name: `<div class="col-md-3 ">
+  {name: `<div class="col-md-3 col-sm-6">
   <div class="model">
   <div>
     <img class="small-image" src="img/view 01.jpg">
@@ -140,7 +140,7 @@ $(document).ready(function(){
   </div>
 </div>
 </div>`},
-{name: `<div class="col-md-3 ">
+{name: `<div class="col-md-3 col-sm-6">
 <div class="model">
 <div>
   <img class="small-image" src="img/view 01.jpg">
@@ -162,7 +162,7 @@ $(document).ready(function(){
 </div>
 </div>
 </div>`},
-{name: `<div class="col-md-3 ">
+{name: `<div class="col-md-3 col-sm-6">
 <div class="model">
 <div>
   <img class="small-image" src="img/view 01.jpg">
@@ -243,4 +243,5 @@ $(".nav-link").click(function()
  $(this).addClass("active");
   
 })
+
 })
