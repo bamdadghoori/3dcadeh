@@ -129,8 +129,69 @@ nav .form-inline{
         left: -7vw;
     
     }
+    /* footer */
+footer{
+    direction: rtl;
+    width: 100%;
+    background-color:#23272c !important ;
+    font-family: yekan;
+    margin-top: 16.4vh;
+    color: white;
+}
+footer .text-light{
+    color: white !important;
+}
+.text-light:hover{
+    color: white !important;
+}
+.subscribe-div-button{
+    position: relative;
+    left: 0vw;
+    top: 2vh;
+    font-family: yekan;
+    
+}
+.subscribe input{
+    border-radius: 5px;
+   padding: 5px;
+   width: 13.7vw;
+}
+.term-of-use{
+    font-family: yekan;
+    direction: rtl;
+    text-align: right;
+    position: relative;
+    right: 5.5vw;
+    width: 15vw;
+}
+.term-of-use a{
+    text-decoration: underline !important;
+   cursor: pointer;
+   color: #007bff !important;
+}
+.subscribe-div-button .btn{
+    width: 13.7vw;
+    font-size: 2.5vh !important;
+    font-weight: bold;
+}
+footer .text-uppercase{
+    text-align: center;
+}
+footer p{
+    text-align: center;
+}
+.subscribe h6{
+    position: relative;
+    bottom: 0.5vh;
+    /* right: 2vw; */
+    right: 2.7vw;
+}
+.description{
+    font-family: sahel;
+    font-weight: bold;
+}
     /* responsive */
-    @media(max-width:600px){
+    @media(max-width:590px){
         .search-section{
           
             margin-top: unset;
