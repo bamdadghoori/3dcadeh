@@ -157,7 +157,7 @@
 }
 
 
-.floating-label {
+/* .floating-label {
     font-family:yekan;
     font-size: 2.5vh;
     color: #212529;
@@ -174,12 +174,12 @@ input:focus ~ .floating-label {
     top: -3.5vh;
     bottom: 0px;
     left:10vw;
-    /* font-size: 11px; */
+    
     opacity: 1;
     color: #212529;
     font-family: yekan;
      
-}
+} */
 /* range slider */
 #slider {
     width: 10vw;
