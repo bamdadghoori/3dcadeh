@@ -52,23 +52,24 @@
   
   /* STRUCTURE */
   
-  .wrapper {
+  .wrapper-register {
     display: none;
     left: -2vw;
-    overflow-y:scroll;
-opacity: 0;
+    /* overflow-y: scroll; */
+    
     align-items: center;
     flex-direction: column; 
     justify-content: center;
     width: 100%;
     /* min-height: 100%; */
     padding: 20px;
-    position: fixed;
-    top: 10vh;
+    position: absolute;
+    top: 5vh;
     z-index: 998;
   }
   
   #formContent {
+    
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
@@ -92,7 +93,7 @@ opacity: 0;
     border-radius: 0 0 10px 10px;
     font-family: yekan;
   }
-  .register-link{
+  .register-link,.login-link{
     color: #0d6efd;
     font-family: yekan;
     font-size: 3vh;
@@ -140,7 +141,7 @@ opacity: 0;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  #mobile{
+  #mobile2{
     direction: ltr;
     text-align: left;
     font-family:yekan;
@@ -184,8 +185,8 @@ opacity: 0;
     font-size:0.9rem;
     margin-bottom:2vh;
   }
-  .buttonLoc{
-    margin-top:5vh !important;
+  .buttonLoc-register{
+    margin-bottom:0vh !important;
   }
   input[type=text]:focus {
     background-color: #fff;
@@ -352,6 +353,121 @@ input:focus ~ .floating-label {
     font-family: yekan;
      
 }
+.floating-label-name {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left: 28vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-name {
+  position: absolute;
+  top: -4vh;
+  bottom: 0px;
+  left:28vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+.floating-label-family {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left: 24vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-family {
+  position: absolute;
+  top: -4vh;
+  bottom: 0px;
+  left:24vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+.floating-label-email {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left: 27vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-email {
+  position: absolute;
+  top: -4vh;
+  bottom: 0px;
+  left:27vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+.floating-label-password{
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left: 25.5vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-password{
+  position: absolute;
+  top: -4vh;
+  bottom: 0px;
+  left:25.5vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+.floating-label-password-repeat {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left: 22.5vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-password-repeat{
+  position: absolute;
+  top: -4vh;
+  bottom: 0px;
+  left:22.5vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
 .login-title{
     font-family: yekan;
     font-size: 3vh;
@@ -369,10 +485,10 @@ input:focus ~ .floating-label {
 display: contents;
 }
 
-.vali{
-  left: 6vw;
+.vali-register{
+  left: 8vw;
   top: 0vh;
-
+ font-size: 0.9rem;
     position: relative;
     display: none;
     margin-bottom: -10vh;
@@ -383,11 +499,15 @@ display: contents;
    height: fit-content;
    height: -moz-fit-content;
 }
-.valiWhole{
+.valiWhole-register{
   float: right;
   width: fit-content;
   width: -moz-fit-content;
  }
+ .vali-password{
+   left:0vw !important
+ }
+ /*end of validation */
  /* responsive */
  @media(max-width:600px) {
         
@@ -413,8 +533,48 @@ display: contents;
       font-family: yekan;
 
   }
+  #name ~ .blurLabel{
+    top: -4vh !important;
+    bottom: 0px !important;
+    left:28vw !important;
+    /* font-size: 11px; */
+    opacity: 1;
+    color: #404040 !important;
+    font-family: yekan;
 
-/*end of validation */
+}
+#email ~ .blurLabel{
+  top: -4vh !important;
+  bottom: 0px !important;
+  left:27vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+input[name="password"] ~ .blurLabel{
+  top: -4vh !important;
+  bottom: 0px !important;
+  left:25.5vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+#password2-repeat ~ .blurLabel{
+  top: -4vh !important;
+  bottom: 0px !important;
+  left:22.5vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+
+
 
 /* responsive */
 @media(max-width:600px){
@@ -425,10 +585,45 @@ display: contents;
     left:50vw;
         top: -3vh;
   }
+  .floating-label-name{
+    left:63vw;
+  }
+  input:focus ~ .floating-label-name{
+    left:63vw;
+        top: -3vh;
+  }
+  .floating-label-family{
+    left:47vw;
+  }
+  input:focus ~ .floating-label-family{
+    left:47vw;
+        top: -3vh;
+  }
+  .floating-label-email{
+    left:59vw;
+  }
+  input:focus ~ .floating-label-email{
+    left:59vw;
+        top: -3vh;
+  }
+  .floating-label-password{
+    left:53vw;
+  }
+  input:focus ~ .floating-label-password{
+    left:53vw;
+        top: -3vh;
+  }
+  .floating-label-password-repeat{
+    left:44vw;
+  }
+  input:focus ~ .floating-label-password-repeat{
+    left:44vw;
+        top: -3vh;
+  }
   .wrapper{
     top:17vh
 }
-.vali{
+.vali-register{
   /* position: relative; */
   top:0vh;
   left: 7vw;
@@ -439,13 +634,25 @@ display: contents;
   .blurLabel{
     left: 50vw !important;
   }
+  #name ~ .blurLabel{
+     left: 63vw !important;
+  }
+  #email ~ .blurLabel{
+    left:59vw !important;
+  }
+  input[name="password"] ~ .blurLabel{
+    left:53vw !important;
+  }
+  #password2-repeat ~ .blurLabel{
+    left:44vw !important;
+  }
   .form-check-input {
     margin-right: -6vw;
 }
 }
 /* responsive miani */
 @media screen  and (min-width:600px) and (max-width:700px){
-  .vali{
+  .vali-register{
    
     left:14vw;
   }
@@ -456,10 +663,40 @@ display: contents;
     position: relative;
   }
   .floating-label{
-    left:47vw;
+    left:52vw;
   }
   input:focus ~ .floating-label{
-    left:47vw;
+    left:52vw;
+  }
+  .floating-label-name{
+    left:56vw;
+  }
+  input:focus ~ .floating-label-name{
+    left:56vw;
+  }
+  .floating-label-family{
+    left:51vw;
+  }
+  input:focus ~ .floating-label-family{
+    left: 51vw;
+  }
+  .floating-label-email{
+    left:55vw;
+  }
+  input:focus ~ .floating-label-email{
+    left:55vw;
+  }
+  .floating-label-password{
+    left:53vw;
+  }
+  input:focus ~ .floating-label-password{
+    left:53vw;
+  }
+  .floating-label-password-repeat{
+    left:50vw;
+  }
+  input:focus ~ .floating-label-password-repeat{
+    left:50vw;
   }
   input[type=text]{
     font-size: 3vh;
@@ -468,7 +705,22 @@ display: contents;
     font-size: 3vh;
 }
   .blurLabel{
-    left: 47vw !important;
+    left: 52vw !important;
+  }
+  #name ~ .blurLabel{
+    left: 56vw !important;
+  }
+  #family ~ .blurLabel{
+    left: 51vw !important;
+  }
+  #email ~ .blurLabel{
+    left: 55vw !important;
+  }
+  input[name="password"] ~ .blurLabel{
+    left: 53vw !important;
+  }
+  #password2-repeat ~ .blurLabel{
+    left: 50vw !important;
   }
   footer{
     margin-top: 28vh;
@@ -478,7 +730,7 @@ display: contents;
 }
 }
 @media screen and (min-width:701px) and (max-width:992px) {
-  .vali{
+  .vali-register{
     
     left:14vw;
   }
@@ -488,6 +740,36 @@ display: contents;
   input:focus ~ .floating-label{
     left:35vw;
   }
+  .floating-label-name{
+    left:45vw;
+  }
+  input:focus ~ .floating-label-name{
+    left:45vw;
+  }
+  .floating-label-family{
+    left:31vw;
+  }
+  input:focus ~ .floating-label-family{
+    left: 31vw;
+  }
+  .floating-label-email{
+    left:41vw;
+  }
+  input:focus ~ .floating-label-email{
+    left:41vw;
+  }
+  .floating-label-password{
+    left:36vw;
+  }
+  input:focus ~ .floating-label-password{
+    left:36vw;
+  }
+  .floating-label-password-repeat{
+    left:28vw;
+  }
+  input:focus ~ .floating-label-password-repeat{
+    left:28vw;
+  }
   input[type=text]{
     font-size: 3vh;
   }
@@ -496,6 +778,21 @@ display: contents;
 }
   .blurLabel{
     left: 35vw !important;
+  }
+  #name ~ .blurLabel{
+    left: 45vw !important;
+  }
+  #family ~ .blurLabel{
+    left: 31vw !important;
+  }
+  #email ~ .blurLabel{
+    left: 41vw !important;
+  }
+  input[name="password"] ~ .blurLabel{
+    left: 36vw !important;
+  }
+  #password2-repeat ~ .blurLabel{
+    left: 28vw !important;
   }
   .form-check-input {
     margin-right: -3vw;
@@ -523,7 +820,7 @@ display: contents;
 }
 /* responsive gooshi haye kheili koochik */
 @media screen and (min-width:280px) and (max-width:345px){
-  .vali{
+  .vali-register{
     width: 80%;
     left: 12vw;
   }
