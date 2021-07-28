@@ -356,5 +356,12 @@ else if($("#password2").val()!=$("#password-repeat").val()){
   $("html,body").animate({scrollTop:0})
   $(".vali-register").removeClass("vali-password")
  }
+ else if($(".check-reg").is(":checked")==false){
+  e.preventDefault();
+  $(".vali-register").css("display","block")
+  $(".valiWhole-register").text("لطفاً تیک موافقت با قوانین را بزنید")
+  $("html,body").animate({scrollTop:0})
+  $(".vali-register").removeClass("vali-password")
+ }
  })
 })
