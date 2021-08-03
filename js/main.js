@@ -247,6 +247,8 @@ $(".nav-link").click(function()
 $(".login").click(function(){
   $("html,body,.model").css({ "background-color": "rgba(0,0,0,0.1)"})
   $(".wrapper").css("display","flex")
+  $(".wrapper-forget").css("display","none")
+  $(".wrapper-register").css("display","none")
 })
 $(".login-title .fa-window-close").click(function(){
   $(this).parent().parent().parent().css("display","none")
@@ -265,6 +267,30 @@ $(".login-link").click(function(e){
   $(".wrapper-register").css("display","none")
 })
 
+$(".mobile-tab-col").click(function(){
+   
+  $(".second,.fourth").removeClass("fadeIn")
+$(this).css("background-color","#ffff00")
+  $(".mail-div").css("display","none")
+  $(".mail-tab-col").css("background-color","unset")
+  $(".mobile-div").css("display","block")
+  $("#vali-mail").css("display","none")
+})
+$(".mail-tab-col").click(function(){
+  
+  $(".second,.fourth").removeClass("fadeIn")
+  $(this).css("background-color","#ffff00")
+  $(".mobile-div").css("display","none")
+  $(".mobile-tab-col").css("background-color","unset")
+  $(".mail-div").css("display","block")
+  $("#vali-mobile").css("display","none")
+})
+
+$(".forget-password-link").click(function(){
+  $(".wrapper").css("display","none")
+  $(".wrapper-forget").css("display","flex")
+})
+//end of modal
 $(".blur").blur(function(){
   if(!$(this).val()){
   $(this).next().removeClass("blurLabel");
@@ -364,4 +390,53 @@ else if($("#password2").val()!=$("#password-repeat").val()){
   $(".vali-register").removeClass("vali-password")
  }
  })
+ //forget-password validation
+$(".buttonLoc-forget-mail").click(function(e){
+  var mail=$("#email-forget").val();
+  var reMail= /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+if(!$("#email-forget").val()){
+  e.preventDefault();
+    $("#vali-mail").css("display","block")
+    $("#valiWhole-mail").text("لطفاً فیلد ستاره دار را پر کنید")
+    $("html,body").animate({scrollTop:0})
+}
+ else if(reMail.test(mail)==false)
+  {
+ 
+    e.preventDefault();
+    $("#vali-mail").css("display","block")
+    $("#valiWhole-mail").text("ایمیل وارد شده صحیح نیست")
+    $("html,body").animate({scrollTop:0})
+   
+  }
+  // else{
+  //   alert("y")
+  // }
 })
+$(".buttonLoc-forget-mobile").click(function(e){
+ 
+  var mobile=$("#mobile-forget").val();
+    var reMobile=/^0{1}(?:[0-9] ?){6,14}[0-9]$/;
+if(!$("#mobile-forget").val()){
+  e.preventDefault();
+    $("#vali-mobile").css("display","block")
+    $("#valiWhole-mobile").text("لطفاً فیلد ستاره دار را پر کنید")
+    $("html,body").animate({scrollTop:0})
+}
+ else if(reMobile.test(mobile)==false)
+  {
+    
+  
+    e.preventDefault();
+    $("#vali-mobile").css("display","block")
+    $("#valiWhole-mobile").text("موبایل وارد شده صحیح نیست")
+    $("html,body").animate({scrollTop:0})
+   
+  }
+  // else{
+  //   alert("y")
+  // }
+})
+})
+

@@ -821,9 +821,9 @@ input[name="password"] ~ .blurLabel{
   /* .floating-label{
     left:26vw;
   } */
-  input:focus ~ .floating-label{
+  /* input:focus ~ .floating-label{
     left:27vw;
-  }
+  } */
   .blurLabel{
     left: 27vw;
   }
